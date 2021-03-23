@@ -1,4 +1,4 @@
-funlet xPos;
+let xPos;
 let increment;
 
 function setup(){
