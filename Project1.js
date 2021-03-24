@@ -1,13 +1,20 @@
 let xPos;
 let increment;
+let fr=20;
+
+
 
 function setup(){
   createCanvas(500,500);
   background("#1C193E");  
   xPos= 40;
+  frameRate(fr);
   increment=1;
+  
 }
 function draw(){
+  
+  
   fill("#D7D5ED");
   noStroke();
   rect(-5,340,320,162,20);
@@ -23,7 +30,7 @@ function draw(){
     quad(228,430, 223,430,190,460,195,460);
     stroke("#8438A2");
     line(113.33,375, xPos, 440);
-    //frameRate()(20);
+    fr=20;
     xPos=xPos+increment;
     if(xPos<=40){
       increment=1;
@@ -220,4 +227,42 @@ function draw(){
       rotate(radians(70));
     }pop();
   
+  
+  noStroke();
+  fill("#534E55")
+  ellipse(50,50,60,50);
+  ellipse(80,40,60,50);
+  ellipse(130,50,60,50);
+  ellipse(70,70,60,50);
+  ellipse(110,65,60,50);
+  
+  ellipse(185,50,60,50);
+  ellipse(215,40,60,50);
+  ellipse(265,50,60,50);
+  ellipse(205,70,60,50);
+  ellipse(245,65,60,50);
+  
+  ellipse(150,100,60,50);
+  ellipse(180,90,60,50);
+  ellipse(230,100,60,50);
+  ellipse(170,120,60,50);
+  ellipse(210,115,60,50);
+  
+   ellipse(250,150,60,50);
+  ellipse(280,140,60,50);
+  ellipse(330,150,60,50);
+  ellipse(270,170,60,50);
+  ellipse(310,165,60,50);
+  
+  ellipse(345,40,60,50);
+  ellipse(375,30,60,50);
+  ellipse(425,40,60,50);
+  ellipse(365,60,60,50);
+  ellipse(405,55,60,50);
+  
+  ellipse(410,150,60,50);
+  ellipse(440,140,60,50);
+  ellipse(490,150,60,50);
+  ellipse(430,170,60,50);
+  ellipse(470,165,60,50);
 }
