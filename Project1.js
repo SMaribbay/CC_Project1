@@ -1,4 +1,4 @@
-funlet xPos;
+let xPos;
 let increment;
 
 function setup(){
@@ -56,5 +56,168 @@ function draw(){
     fill("#FFFFFF");
     circle(xPos+14, 407.5, 4);
     circle(xPos+23, 407.5,4);
+    //pink flowers
+    push();
+    translate(145,480);
+    for(let i = 0; i<6; i++){
+      noStroke();
+      fill("#C3A9E5");
+    ellipse(0,5,8,8);
+    rotate(radians(70));
+    fill("#6326B4");
+    ellipse(0,0,8,8);
+    }
+    pop();
     
+    push();
+    translate(160,480);
+    for(let i = 0; i<6; i++){
+      noStroke();
+      fill("#C3A9E5");
+    ellipse(0,5,8,8);
+    rotate(radians(70));
+    fill("#6326B4");
+    ellipse(0,0,8,8);
+    }
+    pop();
+    
+    push();
+    translate(175,480);
+    for(let i = 0; i<6; i++){
+      noStroke();
+      fill("#C3A9E5");
+    ellipse(0,5,8,8);
+    rotate(radians(70));
+    fill("#6326B4");
+    ellipse(0,0,8,8);
+    }
+    pop();
+    
+    push();
+    translate(190,480);
+    for(let i = 0; i<6; i++){
+      noStroke();
+      fill("#C3A9E5");
+    ellipse(0,5,8,8);
+    rotate(radians(70));
+    fill("#6326B4");
+    ellipse(0,0,8,8);
+    }
+    pop();
+    
+    push();
+    translate(205,480);
+    for(let i = 0; i<6; i++){
+      noStroke();
+      fill("#C3A9E5");
+    ellipse(0,5,8,8);
+    rotate(radians(70));
+    fill("#6326B4");
+    ellipse(0,0,8,8);
+    }
+    pop();
+    
+    push();
+    translate(220,480);
+    for(let i = 0; i<6; i++){
+      noStroke();
+      fill("#C3A9E5");
+    ellipse(0,5,8,8);
+    rotate(radians(70));
+    fill("#6326B4");
+    ellipse(0,0,8,8);
+    }
+    pop();
+    
+    push();
+    translate(235,480);
+    for(let i = 0; i<6; i++){
+      noStroke();
+      fill("#C3A9E5");
+    ellipse(0,5,8,8);
+    rotate(radians(70));
+    fill("#6326B4");
+    ellipse(0,0,8,8);
+    }
+    pop();
+    // blue flowers
+    push();
+    translate(130,480);
+    for(let i=0;i<6; i++){
+      noStroke();
+      fill("#0B45D3");
+    ellipse(0,5, 8,8);
+    fill("#3664D6");
+      ellipse(0,0,8,8);
+      rotate(radians(70));
+    }
+    pop();
+    
+    push();
+    translate(100,480);
+    for(let i=0;i<6; i++){
+      noStroke();
+      fill("#0B45D3");
+    ellipse(0,5, 8,8);
+    fill("#3664D6");
+      ellipse(0,0,8,8);
+      rotate(radians(70));
+    }
+    pop();
+    
+    push();
+    translate(115,480);
+    for(let i=0;i<6; i++){
+      noStroke();
+      fill("#0B45D3");
+    ellipse(0,5, 8,8);
+    fill("#3664D6");
+      ellipse(0,0,8,8);
+      rotate(radians(70));
+    }pop();
+    
+        push();
+    translate(85,480);
+    for(let i=0;i<6; i++){
+      noStroke();
+      fill("#0B45D3");
+    ellipse(0,5, 8,8);
+    fill("#3664D6");
+      ellipse(0,0,8,8);
+      rotate(radians(70));
+    }pop();
+    
+    push();
+    translate(70,480);
+    for(let i=0;i<6; i++){
+      noStroke();
+      fill("#0B45D3");
+    ellipse(0,5, 8,8);
+    fill("#3664D6");
+      ellipse(0,0,8,8);
+      rotate(radians(70));
+    }pop();
+    
+    push();
+    translate(55,480);
+    for(let i=0;i<6; i++){
+      noStroke();
+      fill("#0B45D3");
+    ellipse(0,5, 8,8);
+    fill("#3664D6");
+      ellipse(0,0,8,8);
+      rotate(radians(70));
+    }pop();
+    
+    push();
+    translate(40,480);
+    for(let i=0;i<6; i++){
+      noStroke();
+      fill("#0B45D3");
+    ellipse(0,5, 8,8);
+    fill("#3664D6");
+      ellipse(0,0,8,8);
+      rotate(radians(70));
+    }pop();
+  
 }
