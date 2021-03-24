@@ -47,15 +47,15 @@ function draw(){
       increment=-1;
     }
     fill("#220DA0");
-    circle(xPos+19.165,407.5, 25);
-    line(xPos+20,419.5,xPos+20,440);
-    line(xPos+20,438,xPos+2,438);
-    line(xPos+20,438,xPos+2,438);
-    line(xPos+20,428.5,xPos,430.5);
-    line(xPos+20,428.5,xPos+38.33,430.5);
+    circle(xPos+19.165,407.5, 25);//head
+    line(xPos+20,419.5,xPos+20,440);//body
+    line(xPos+20,438,xPos+2,438);//leg 1
+    line(xPos+20,438,xPos+2,438);//leg 2
+    line(xPos+20,428.5,xPos,430.5);//right arm
+    line(xPos+20,428.5,xPos+38.33,430.5);//left arm
     fill("#FFFFFF");
-    circle(xPos+14, 407.5, 4);
-    circle(xPos+23, 407.5,4);
+    circle(xPos+14, 407.5, 4);//eye
+    circle(xPos+23, 407.5,4);//eye
     //pink flowers
     push();
     translate(145,480);
