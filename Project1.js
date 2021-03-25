@@ -1,17 +1,22 @@
 let xPos;
+let yPos;
 let increment;
+let increment2;
 let fr=20;
 let droplet;
 let droplet2;
 let droplet3;
 let droplet4;
+let yCircle = [50, 100, 150, 200, 250];
 
 function setup(){
   createCanvas(500,500);
   background("#1C193E");  
   xPos= 40;
+  yPos=40;
   frameRate(fr);
   increment=1;
+  increment2=10;
   droplet = new Rain();
   droplet2= new Rain();
   droplet3=new Rain();
@@ -19,6 +24,24 @@ function setup(){
 }
 function draw(){
   
+  for (let i = 0; i <10; i++) {
+    fill("#1B2DE0")
+    let circleX = 50 * (i + 3);
+    circle(circleX, yCircle[i], 10);
+
+    yCircle[i]++;
+    
+    if (yCircle[i] > height) {
+      yCircle[i] = 0;
+    }
+  }
+  fr=60;
+    fill("#6B7083")
+    circle(random(40,width),yPos,7.5);
+    yPos=yPos+increment2;
+    if(yPos<height-180){
+      increment2=1;
+}
 
   fill("#E0DB42")
   noStroke();
@@ -236,7 +259,7 @@ function draw(){
       rotate(radians(70));
     }pop();
   
-  
+  //CLOUDS
   noStroke();
   fill("#534E55")
   ellipse(50,50,60,50);
@@ -286,32 +309,21 @@ function draw(){
   ellipse(130,150,60,50);
   ellipse(70,170,60,50);
   ellipse(110,165,60,50);
-  
+  //black void
   fill("#000000");
   ellipse(415,450,200,190);
-  
+  //river from left
   fill("#1B2DE0");
   rect(-5,320,355,40,20);
   rect(320,320,40,150,20);
   rect(510,320,-60,40,20);
   rect(450,320,40,150,20);
-  
+  //cr0ss
   fill("#3B0C5A");
   rect(280,360,5,200);
   rect(250,400,70,5)
   
-  /*if(key == "k" || key == "k") {
-    if(mouseX > 180) {
-      if(mouseIsPressed) {
-          strokeWeight(10);
-          stroke(229, 170, 20, 10);
-          for(i = mouseY; i < 100; i += 1) {
-          line(mouseX, i, pmouseX, i + 1);
-        }
-      }
-    }
-  }
-  */
+ //rain
   droplet.move();
   droplet.display();
   droplet2.move();
@@ -329,27 +341,33 @@ function draw(){
       }
     }
 
-    for(var y = 30; y <= height; y += 90) {
-      for(var x = 30; x <= width; x += 90) {
+    for(var q = 30; q <= height; q += 90) {
+      for(var d = 30; d <= width; d += 90) {
         fill("#BCBBA3");
-        ellipse(x, y, 3, 3);
+        ellipse(d, q, 3, 3);
       }
     }
   }
-  if(mouseX<380 &&mouseY<320&&mouseY>170){
+  //tear-like shapes
+   if(mouseX<width &&mouseY<320&&mouseY>120){
 fill("#3A0D5A");
-  if(mouseIsPressed)
-    fill("#7904CE")
-    for (let i = 0; i <10; i ++) {
-    ellipse(mouseX,mouseY, 5, 15);
-    rotate(radians(70));
+  if(mouseIsPressed){
+    fill("#172879")
+    for (let i = 3; i <10; i ++) {
+     noStroke();
+  triangle(mouseX, mouseY, mouseX - 10, mouseY + 10, mouseX + 10, mouseY + 10);
+  ellipse(mouseX,mouseY+15,20,20);
+      
+    }
+   
     }
   }
 }
+
 class Rain{
   constructor(){
     this.x=random(365,445);
-    this.y=(150);
+    this.y=(330);
    this.size=random(2,8);
     this.speed=1;
   }
@@ -358,7 +376,9 @@ class Rain{
     this.y+=random(this.speed,this.speed)
   }
   display(){
-    fill("#3C72DB")
+    fill("#1B2DE0")
+    
     rect(this.x,this.y,this.size,30,20)
   }
   }
+  
