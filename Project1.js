@@ -7,6 +7,7 @@ let droplet;
 let droplet2;
 let droplet3;
 let droplet4;
+let droplet5;
 let yCircle = [50, 100, 150, 200, 250];
 
 function setup(){
@@ -21,6 +22,7 @@ function setup(){
   droplet2= new Rain();
   droplet3=new Rain();
   droplet4=new Rain();
+  droplet5=new Rain();
 }
 function draw(){
   
@@ -35,15 +37,26 @@ function draw(){
       yCircle[i] = 0;
     }
   }
+  if(key == "A" || key == "a"){
   fr=60;
-    fill("#6B7083")
+    fill("#CBCBCB")
     circle(random(40,width),yPos,7.5);
     yPos=yPos+increment2;
     if(yPos<height-180){
       increment2=1;
+    }
 }
+  if(key=="Z"|| key=="z"){
+    fr=60;
+    fill("#3A71E5")
+    circle(random(40,width),yPos,7.5);
+    yPos=yPos+increment2;
+    if(yPos<height-180){
+      increment2=2;
+  }
+  }
 
-  fill("#E0DB42")
+  fill("#CDD697")
   noStroke();
   ellipse(20,40,40);
   fill("#D7D5ED");
@@ -310,11 +323,12 @@ function draw(){
   ellipse(70,170,60,50);
   ellipse(110,165,60,50);
   //black void
-  fill("#000000");
-  ellipse(415,450,200,190);
+  fill(0,0,0,10);
+  ellipse(415,450,250,200);
   //river from left
-  fill("#1B2DE0");
+  fill(27,45,224);
   rect(-5,320,355,40,20);
+  fill(27,45,224,30);
   rect(320,320,40,150,20);
   rect(510,320,-60,40,20);
   rect(450,320,40,150,20);
@@ -322,6 +336,8 @@ function draw(){
   fill("#3B0C5A");
   rect(280,360,5,200);
   rect(250,400,70,5)
+  
+ 
   
  //rain
   droplet.move();
@@ -332,22 +348,23 @@ function draw(){
   droplet3.display();
   droplet4.move();
   droplet4.display();
+  droplet5.display();
   
    if(key == "T" || key == "t") {
-    for(var y = 0; y <= height; y += 90) {
-      for(var x = 0; x <= width; x += 90) {
-        fill("#5F5F4E");
-        ellipse(x, y, 3, 3);
-      }
-    }
+		for(var y = 0; y <= height; y += 90) {
+			for(var x = 0; x <= width; x += 90) {
+				fill("#5F5F4E");
+				ellipse(x, y, 3, 3);
+			}
+		}
 
-    for(var q = 30; q <= height; q += 90) {
-      for(var d = 30; d <= width; d += 90) {
-        fill("#BCBBA3");
-        ellipse(d, q, 3, 3);
-      }
-    }
-  }
+		for(var q = 30; q <= height; q += 90) {
+			for(var d = 30; d <= width; d += 90) {
+				fill("#BCBBA3");
+				ellipse(d, q, 3, 3);
+			}
+		}
+	}
   //tear-like shapes
    if(mouseX<width &&mouseY<320&&mouseY>120){
 fill("#3A0D5A");
@@ -362,6 +379,9 @@ fill("#3A0D5A");
    
     }
   }
+   //fog
+  fill(235,238,245,0.6);
+  rect(0,0,width,height);
 }
 
 class Rain{
@@ -381,4 +401,3 @@ class Rain{
     rect(this.x,this.y,this.size,30,20)
   }
   }
-  
